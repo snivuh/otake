@@ -1,0 +1,15 @@
+body {
+	font-family: Verdana, Tahoma, Sans-Serif;
+	font-size:90%;
+} #h-img {
+    width: 75px;
+} #h-imgs {
+    width: 5%;
+} nav > ul > li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 20px;
+	margin-left: 20px;
+} form#register > table > tbody > tr > td > p {
+	margin:2px;
+}
