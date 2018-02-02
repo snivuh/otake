@@ -3,10 +3,15 @@
 	function registerUser()
 	{
 		if(isset($_POST['do_register'])) {
-			$formData = $_POST;
+			//wolfram00: вот нахуй приравнивать к хуй знает какой переменной массивы _GET и _POST?
+			$formData = $_POST; //todo потом выпилить
 			if($formData['login'] == '') {
 				echo "<p class=\"error\">Введи логине, сука!</p>";
-			} elseif($formData['passwd'] == '') {
+			}
+			elseif(!preg_match("/^[a-z0-9A-Zа-яА-Я_-]+$/i", $_POST['login'])) {
+			    echo "<p>Никнейм содержит некорректные символы</p>";
+			}
+			elseif($formData['passwd'] == '') {
 				echo '<p class="error">Введи пароле, сука!</p>';
 			} elseif($formData['email'] == '' || !preg_match('/@/', $formData['email'])) {
 				echo '<p class="error">Введи ъмло, сука!</p>';
@@ -49,8 +54,8 @@
 			if($_POST['address'] == '') {
 				echo "<p>Адрес не введен</p>";
 			}
-			elseif(preg_match('/[!,@,#,$,%,^,&,*,(,),~,`,=,+,\/,{,},\[,\],;,\',\,,.,\\,<,>,?,:,"]/', $_POST['address'])) {
-				echo "<p>Адрес содержит некорректные символы</p>";
+			elseif(!preg_match("/^[a-z0-9A-Zа-яА-Я_-]+$/i", $_POST['address'])) {
+			    echo "<p>Никнейм содержит некорректные символы</p>";
 			}
 			elseif($_POST['name'] == '') {
 				echo "<p>Имя раздела не введено</p>";
