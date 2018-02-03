@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SESSION['user'])) :
+if(!isset($_SESSION['user'])) : // если нет логина
 	loginUser();// все функции описаны в functions.php
 ?>
 <form action="" method="post">

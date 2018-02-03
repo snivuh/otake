@@ -1,5 +1,5 @@
 <?php
-	if(isset($_SESSION['user'])) {
+	if(isset($_SESSION['user'])) { // если есть логин
 		createSubPage();
 		?>
 		<h2>Создать раздел</h2>
@@ -15,6 +15,6 @@
 			<p><button type="submit" name="doCreateSubPage">Создать</button></p>
 		</form>
 		<?php
-	} else {
+	} else { // если нет логина
 		include 'login.php';
 	}

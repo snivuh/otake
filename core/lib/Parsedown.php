@@ -342,7 +342,7 @@ class Parsedown
     {
         $text = $Block['element']['text']['text'];
 
-        $text = htmlspecialchars($text, ENT_NOQUOTES, 'UTF-8');
+        // $text = htmlspecialchars($text, ENT_NOQUOTES, 'UTF-8');
 
         $Block['element']['text']['text'] = $text;
 
@@ -457,7 +457,7 @@ class Parsedown
     {
         $text = $Block['element']['text']['text'];
 
-        $text = htmlspecialchars($text, ENT_NOQUOTES, 'UTF-8');
+        // $text = htmlspecialchars($text, ENT_NOQUOTES, 'UTF-8');
 
         $Block['element']['text']['text'] = $text;
 
@@ -1074,7 +1074,7 @@ class Parsedown
         if (preg_match('/^('.$marker.'+)[ ]*(.+?)[ ]*(?<!'.$marker.')\1(?!'.$marker.')/s', $Excerpt['text'], $matches))
         {
             $text = $matches[2];
-            $text = htmlspecialchars($text, ENT_NOQUOTES, 'UTF-8');
+            // $text = htmlspecialchars($text, ENT_NOQUOTES, 'UTF-8');
             $text = preg_replace("/[ ]*\n/", ' ', $text);
 
             return array(

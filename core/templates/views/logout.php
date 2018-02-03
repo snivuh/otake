@@ -1,3 +1,3 @@
 <?php
-	logout();
+	logout(); // все функции в functions.php
 ?>

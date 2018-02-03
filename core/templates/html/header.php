@@ -16,10 +16,10 @@
 				<td id="h-info">
 					<nav>
 						<ul>
-							<?php if(!isset($_SESSION['user'])) : ?>
+							<?php if(!isset($_SESSION['user'])) : // если нет логина ?>
 							<li><a href="<?php echo $config['site_url'] ?>/register/">Регистрация</a></li>
 							<li><a href="<?php echo $config['site_url'] ?>/login/">Вход</a></li>
-							<?php else : ?>
+							<?php else : // если есть логин ?>
 							<li><a href="<?php echo $config['site_url'] ?>/createSubPage/">Создать раздел</a></li>
 							<li><a href="<?php echo $config['site_url'] ?>/logout/">Выход</a></li>
 							<?php endif; ?>

@@ -1,6 +1,6 @@
 <?php
 if(!isset($_SESSION['user'])) :
-	registerUser(); // все функции описаны в core/lib/functions.php
+	registerUser(); // все функции описаны в functions.php
 ?>
 <form action="" method="post" id="register">
 	<!-- login, passwd, email -->
