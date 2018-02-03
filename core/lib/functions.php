@@ -2,6 +2,7 @@
 	session_start();
 	function registerUser()
 	{
+<<<<<<< HEAD
 		if(isset($_POST['do_register'])) { // этот блок будет выполнен, если есть в суперглобальном массиве _POST ячейка do_register 
 			$formData = $_POST; // просто для простаты набора
 			if($formData['login'] == '') { // проверка на пустоту логина
@@ -10,6 +11,18 @@
 			elseif(!preg_match("/^[a-z0-9A-Zа-яА-Я_-]+$/i", $_POST['login'])) { // проверка наличия в логине говносимволов
 			    echo "<p>Никнейм содержит некорректные символы</p>";
 			} elseif($formData['passwd'] == '') { // проверка на пустоту пароля
+=======
+		if(isset($_POST['do_register'])) {
+			//wolfram00: вот нахуй приравнивать к хуй знает какой переменной массивы _GET и _POST?
+			$formData = $_POST; //todo потом выпилить
+			if($formData['login'] == '') {
+				echo "<p class=\"error\">Введи логине, сука!</p>";
+			}
+			elseif(!preg_match("/^[a-z0-9A-Zа-яА-Я_-]+$/i", $_POST['login'])) {
+			    echo "<p>Никнейм содержит некорректные символы</p>";
+			}
+			elseif($formData['passwd'] == '') {
+>>>>>>> 9fac47b8926eb79ba7c51a916e0ccbf8e2813789
 				echo '<p class="error">Введи пароле, сука!</p>';
 			} elseif($formData['email'] == '' || !preg_match('/@/', $formData['email'])) { // проверка на пустоту и наличие символа @ у email
 				echo '<p class="error">Введи ъмло, сука!</p>';
@@ -52,7 +65,11 @@
 			if($_POST['address'] == '') {  // проверка адреса раздела на пустоту
 				echo "<p>Адрес не введен</p>";
 			}
+<<<<<<< HEAD
 			elseif(!preg_match("/^[a-z0-9A-Zа-яА-Я_-]+$/i", $_POST['address'])) { // проверка наличия в адресе говносимволов
+=======
+			elseif(!preg_match("/^[a-z0-9A-Zа-яА-Я_-]+$/i", $_POST['address'])) {
+>>>>>>> 9fac47b8926eb79ba7c51a916e0ccbf8e2813789
 			    echo "<p>Адрес раздела содержит некорректные символы</p>";
 			}
 			elseif($_POST['name'] == '') { // проверка названия раздела на пустоту
